@@ -288,9 +288,12 @@ public class MainWindow extends javax.swing.JFrame {
                  }
              }
         }
-        decorator.preparar();
-        JOptionPane.showMessageDialog(jpanel, "Sua pizza está pronta!!"); 
-        //limpar();
+        if(decorator!=null){
+            decorator.preparar();
+            }else{
+            decorated.preparar();        
+        }
+        JOptionPane.showMessageDialog(jpanel, "Sua pizza está pronta!!");
     }
     
     private void listaSelecionada() throws ClassNotFoundException, InstantiationException, IllegalAccessException{
